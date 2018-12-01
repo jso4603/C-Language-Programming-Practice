@@ -18,13 +18,15 @@ int main(void)
     for(i=2;i<=num;i++){
         for(j=2;j<i;j++){
             
-            if(i%j==0) x = 0;
-            else{
-                x = 1;
-                break;
+            while(i>j)
+            {
+                if(i%j != 0)
+                {
+                    printf("%d", i);
+                    break;
+            }
             }
         }
     }
     
-    if(x==1) printf("%d", i);
 }
