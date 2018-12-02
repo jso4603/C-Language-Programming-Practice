@@ -6,27 +6,31 @@
 //  Copyright © 2018년 장상옥. All rights reserved.
 //
 
-#include <stdio.h>
+#include<stdio.h>
 
 int main(void)
 {
-    int i,j,num,x = 0;
+    int i,j,num;
+    int row = 0;
     
-    printf("2 이상의 정수를 입력하세요 : ");
+    printf("2이상의 정수를 입력해주세요 :");
     scanf("%d", &num);
     
-    for(i=2;i<=num;i++){
-        for(j=2;j<i;j++){
-            
-            while(i>j)
-            {
-                if(i%j != 0)
-                {
-                    printf("%d", i);
+    for(i=1;i<=num;i++){
+        for(j=2;j<=i-1;j++)
+        {
+            if(i%j == 0)
                     break;
+            
+            if(j == i-1)
+            {
+                row++;
+                row % 5 == 0 ? printf("%d\n", i) : printf("%d ", i);
             }
-            }
+           
         }
     }
+    printf("\n");
+    return 0;
     
 }
