@@ -10,27 +10,31 @@
 
 int main(void)
 {
-    int i,j,num;
+    int num;
     int row = 0;
     
     printf("2이상의 정수를 입력해주세요 :");
     scanf("%d", &num);
     
-    for(i=1;i<=num;i++){
-        for(j=2;j<=i-1;j++)
-        {
-            if(i%j == 0)
-                    break;
+    for (int i = 2; i <= num; i ++) {
+        int sosu = 1;
+        for(int j = 2; j < i; j++) {
             
-            if(j == i-1)
-            {
-                row++;
-                row % 5 == 0 ? printf("%d\n", i) : printf("%d ", i);
+            if (i % j == 0) {
+                sosu = 0;
             }
-           
+        }
+        
+        if (sosu) {
+            if (row % 5 == 0) {
+                printf("\n");
+            }
+            printf("%3d", i);
+            
+            row++;
         }
     }
-    printf("\n");
+    
     return 0;
     
 }

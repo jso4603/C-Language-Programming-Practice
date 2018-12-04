@@ -15,7 +15,7 @@ int main(void)
     printf("숫자 입력(1부터 30까지) : ");
     scanf("%d", &num);
     
-    while(2)
+    while(1)
     {
         if(num==ans)
         {

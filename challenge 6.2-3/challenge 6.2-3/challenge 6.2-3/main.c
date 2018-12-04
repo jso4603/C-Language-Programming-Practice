@@ -13,16 +13,21 @@ int main(void)
     int year, month, totalday, i;
     int dayofweek;
     int dayformonth[12] = {31,28,31,30,31,30,31,31,30,31,30,31};
-    
-    while(1)
+    int loop = 1;
+    while(loop)
     {
     printf(">년, 월을 입력하세요(종료는 0) : ");
-    scanf("%d%d",&year, &month);
+    scanf("%d",&year);
+        if (year == 0) {
+            loop = 0;
+            break;
+        }
+    scanf("%d",&month);
    
     totalday = ((year-1)*365) + ((year-1)/4) - ((year-1)/100) + ((year-1)/400);
     //전년도를 365일로 곱한 다음 윤년인 날을 더해준다.
     
-    //if( !(year%4) && (year%100) || !(year%400)) 이거랑 같은건가??
+    //if( !(year%4) && (year%100) || !(year%400))
     if(((year%4) && !(year%100)) || (year%400))
         dayformonth[1] = 29;
     
@@ -51,7 +56,6 @@ int main(void)
             printf("\n");
     }
     printf("\n\n");
-
     }
     return 0;
 }

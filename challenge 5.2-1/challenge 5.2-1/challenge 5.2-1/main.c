@@ -10,7 +10,7 @@
 
 int main(void)
 {
-    int a, b, res = 0; //
+    int a, b, res;
     char c;
     
     printf("사칙 연산 입력(정수)");
@@ -41,6 +41,7 @@ int main(void)
         printf("사칙연산을 잘못 입력하였습니다.\n");
     }
     
+    //AC
 
     
     return 0;

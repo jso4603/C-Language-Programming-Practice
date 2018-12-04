@@ -24,15 +24,16 @@ int main(void)
     avg_b = (kor_b + mat_b) / 2;
     avg_c = (kor_c + mat_c) / 2;
 
+    
     if((avg_a>avg_b) && (avg_a>avg_c))
     {
         printf("평균점수가 제일 높은 학생은 %s 입니다.\n", a);
     }
-    if((avg_b>avg_a) && (avg_b>avg_c))
+    else if((avg_b>avg_a) && (avg_b>avg_c))
     {
         printf("평균점수가 제일 높은 학생은 %s 입니다.\n", b);
     }
-    if((avg_c>avg_a) && (avg_c>avg_b))
+    else if((avg_c>avg_a) && (avg_c>avg_b))
     {
         printf("평균점수가 제일 높은 학생은 %s 입니다.\n", c);
     }

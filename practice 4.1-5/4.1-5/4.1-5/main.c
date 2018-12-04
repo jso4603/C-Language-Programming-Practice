@@ -14,8 +14,9 @@ int main(void) //연습문제 scanf 활용하여 입력하는 프로그램으로
     int w1000, w500, w100, w50, w10;
     
     printf("안녕하세요 슈퍼마켓입니다.\n");
-    printf("구입하실 또또면과 꽁꽁바 갯수를 입력하세요\n");
+    printf("구입하실 또또면과 꽁꽁바 갯수를 입력하세요 \n");
     scanf("%d%d", &dodo,&gogo);
+    
     
     int total = (dodo*70) + (gogo*30);
     
